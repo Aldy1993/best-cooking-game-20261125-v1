@@ -1,0 +1,32 @@
+/* Warung Senja — page chrome around the canvas. The game itself draws
+   everything inside the 1280x720 canvas; this file only centres it. */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #1a1210;
+  height: 100%;
+  font-family: "Trebuchet MS", "Segoe UI", Verdana, sans-serif;
+}
+#stage {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 0;
+  box-sizing: border-box;
+}
+#game {
+  width: min(1280px, 96vw, calc((100vh - 72px) * 16 / 9));
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.65), 0 0 0 3px #3a2a22;
+  background: #241a15;
+  cursor: pointer;
+}
+#hint {
+  color: #c9a98c;
+  font-size: 13px;
+  letter-spacing: 0.4px;
+}
